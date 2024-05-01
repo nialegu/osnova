@@ -1,16 +1,28 @@
-# osnova
+# Osnova
 
-A new Flutter project.
+Приложение для организации тусовок с твоей компанией
+The app for date and organize parties with your company
 
-## Getting Started
+## Includes the following technologies:
 
-This project is a starting point for a Flutter application.
+- BLoC
+- Drift
+- Shared Preferencies
+- Authorization
+- Push-notifications
+- GoRouter
+- WebSocket
+- Localization
+- Map
+- Custom themes
 
-A few resources to get you started if this is your first Flutter project:
+Список технологий будет увеличиваться
+This list will increase for the time
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Plan of the app:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Разделы нижней навигации: 
+- Домашняя страница
+- Список друзей
+- Список мест
+- Календарь

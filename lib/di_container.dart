@@ -6,6 +6,7 @@ final sl = GetIt.instance;
 
 Future<void> init() async {
   final prefs = await SharedPreferences.getInstance();
+  prefs.setString("password", "123456");
 
   sl.registerLazySingleton(() => AppDatabase());
 }
