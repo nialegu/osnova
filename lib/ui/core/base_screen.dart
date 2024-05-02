@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../generated/l10n.dart';
+
 class BaseScreen extends StatelessWidget {
   const BaseScreen({super.key, required this.navigationShell});
 
@@ -11,8 +13,7 @@ class BaseScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Проверка шрифта",
-          style: TextStyle(fontSize: 24),
+          S.of(context).fontCheck,
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(

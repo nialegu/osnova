@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:osnova/ui/core/routing/base_routes.dart';
+import 'package:osnova/ui/core/utils/themes/dark_theme.dart';
+import 'package:osnova/ui/core/utils/themes/light_theme.dart';
+
+import '../../generated/l10n.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -9,11 +14,20 @@ class App extends StatelessWidget {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       routerConfig: router,
-      theme: ThemeData(
-        fontFamily: "Montserrat",
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+      // Тема
+      theme: lightTheme,
+      darkTheme: darkTheme,
+      themeAnimationDuration: Durations.long2,
+      themeAnimationCurve: Curves.bounceIn,
+      // Локализация
+      localizationsDelegates: const [
+        S.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: S.delegate.supportedLocales,
+      //locale: const Locale("ru"),
     );
   }
 }
