@@ -6,6 +6,6 @@ final loginRoute =
   GoRoute(
     path: "/login",
     name: "Login",
-    builder: (context, state) => const LoginScreen(),
+    builder: (context, state) => LoginScreen(),
   ),
 ]);

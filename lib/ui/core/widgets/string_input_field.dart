@@ -1,28 +1,41 @@
 import 'package:flutter/material.dart';
 
-class StringInputField extends StatelessWidget {
-  StringInputField(
-      {super.key,
-      required this.hintText,
-      required this.labelText,
-      this.initialValue});
+class StringInputField extends StatefulWidget {
+  const StringInputField({
+    super.key,
+    required this.hintText,
+    required this.labelText,
+    this.textController,
+  });
 
   final String hintText;
   final String labelText;
+  final TextEditingController? textController;
 
-  final String? initialValue;
+  @override
+  StateStringInputField createState() => StateStringInputField();
+}
 
-  final _textController = TextEditingController();
+class StateStringInputField extends State<StringInputField> {
+  bool isObscure = true;
 
   @override
   Widget build(BuildContext context) {
-    _textController.text = initialValue ?? "";
     return TextFormField(
-      controller: _textController,
+      controller: widget.textController,
       style: Theme.of(context).textTheme.displayMedium,
+      obscureText: isObscure,
       decoration: InputDecoration(
-          hintText: hintText,
-          labelText: labelText,
+          hintText: widget.hintText,
+          labelText: widget.labelText,
+          suffixIcon: IconButton(
+            icon: Icon(isObscure ? Icons.visibility_off : Icons.visibility),
+            onPressed: () {
+              setState(() {
+                isObscure = !isObscure;
+              });
+            },
+          ),
           border: OutlineInputBorder(
             gapPadding: 5,
             borderRadius: BorderRadius.circular(15),

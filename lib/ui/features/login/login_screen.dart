@@ -6,7 +6,10 @@ import '/ui/core/widgets/string_input_field.dart';
 import '../../../generated/l10n.dart';
 
 class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+  LoginScreen({super.key});
+
+  final _loginController = TextEditingController();
+  final _passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -20,10 +23,12 @@ class LoginScreen extends StatelessWidget {
               StringInputField(
                 hintText: S.of(context).enterLogin,
                 labelText: S.of(context).login,
+                textController: _loginController,
               ),
               StringInputField(
                 hintText: S.of(context).enterPassword,
                 labelText: S.of(context).password,
+                textController: _passwordController,
               ),
               ElevatedButton(
                 onPressed: () => context.go("/home"),
@@ -32,7 +37,15 @@ class LoginScreen extends StatelessWidget {
                   S.of(context).login,
                 ),
               )
-            ],
+            ]
+                .map((e) => Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 20,
+                        vertical: 10,
+                      ),
+                      child: e,
+                    ))
+                .toList(),
           ),
         ),
       ),
