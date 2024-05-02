@@ -9,12 +9,17 @@ class BaseScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text(
+          "Проверка шрифта",
+          style: TextStyle(fontSize: 24),
+        ),
+      ),
       bottomNavigationBar: BottomNavigationBar(
         items: _buildBottomNavBarItems,
         currentIndex: navigationShell.currentIndex,
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
+        // showSelectedLabels: false,
+        // showUnselectedLabels: false,
         onTap: (index) => navigationShell.goBranch(
           index,
           initialLocation: index == navigationShell.currentIndex,
