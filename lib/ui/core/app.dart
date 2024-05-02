@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:osnova/ui/core/routing/base_routes.dart';
-import 'package:osnova/ui/core/utils/themes/dark_theme.dart';
-import 'package:osnova/ui/core/utils/themes/light_theme.dart';
+import 'package:osnova/ui/core/utils/themes/dark/dark_theme.dart';
+import 'package:osnova/ui/core/utils/themes/light/light_theme.dart';
 
 import '../../generated/l10n.dart';
 
