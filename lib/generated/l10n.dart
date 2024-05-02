@@ -99,6 +99,46 @@ class S {
       args: [],
     );
   }
+
+  /// `Enter login`
+  String get enterLogin {
+    return Intl.message(
+      'Enter login',
+      name: 'enterLogin',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login`
+  String get login {
+    return Intl.message(
+      'Login',
+      name: 'login',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter password`
+  String get enterPassword {
+    return Intl.message(
+      'Enter password',
+      name: 'enterPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password`
+  String get password {
+    return Intl.message(
+      'Password',
+      name: 'password',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -6,3 +6,8 @@ const displayLarge = TextStyle(
 const displayMedium = TextStyle(
   fontSize: 14,
 );
+
+const buttonTextStyle = TextStyle(
+  fontSize: 20,
+  fontFamily: "Montserrat",
+);

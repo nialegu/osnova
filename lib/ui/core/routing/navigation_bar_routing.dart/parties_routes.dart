@@ -1,9 +1,6 @@
-import 'package:go_router/go_router.dart';
-import 'package:osnova/ui/features/home/home_screen.dart';
+part of "routes.dart";
 
-StatefulShellBranch get partiesRoutes => _partiesRoutes;
-
-final _partiesRoutes = StatefulShellBranch(
+final partiesRoutes = StatefulShellBranch(
           initialLocation: "/parties",
           routes: [
             GoRoute(

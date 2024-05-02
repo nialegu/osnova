@@ -1,6 +1,6 @@
 part of '../dark_theme.dart';
 
-TextTheme get createLightTextTheme => const TextTheme(
+TextTheme get createDarkTextTheme => const TextTheme(
       displayLarge: displayLarge,
       displayMedium: displayMedium,
     );

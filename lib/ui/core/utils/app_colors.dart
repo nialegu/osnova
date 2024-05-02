@@ -5,4 +5,5 @@ abstract class AppColors {
   static const black = Colors.black;
 
   static const purpleAccent = Colors.purpleAccent;
+  static const deepPurple = Colors.deepPurple;
 }

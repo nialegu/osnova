@@ -3,5 +3,9 @@
   "home": "Home",
   "parties": "Parties",
   "chats": "Chats",
-  "me": "Me"
+  "me": "Me",
+  "enterLogin": "Enter login",
+  "login": "Login",
+  "enterPassword": "Enter password",
+  "password": "Password"
 }

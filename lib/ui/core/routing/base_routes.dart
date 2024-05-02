@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:osnova/ui/core/routing/login_route.dart';
-import 'package:osnova/ui/core/routing/navigation_bar_routing.dart/routes.dart';
+
+import 'login_route.dart';
+import 'navigation_bar_routing.dart/routes.dart';
 
 final rootNavigatorKey = GlobalKey<NavigatorState>();
 
