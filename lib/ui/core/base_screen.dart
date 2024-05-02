@@ -11,32 +11,39 @@ class BaseScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          S.of(context).fontCheck,
-        ),
-      ),
       bottomNavigationBar: BottomNavigationBar(
-        items: _buildBottomNavBarItems,
+        type: BottomNavigationBarType.fixed,
+        enableFeedback: true,
+        items: _buildBottomNavBarItems(context),
         currentIndex: navigationShell.currentIndex,
-        // showSelectedLabels: false,
-        // showUnselectedLabels: false,
+        showSelectedLabels: false,
+        showUnselectedLabels: false,
         onTap: (index) => navigationShell.goBranch(
           index,
           initialLocation: index == navigationShell.currentIndex,
         ),
       ),
+      body: navigationShell,
     );
   }
 
-  List<BottomNavigationBarItem> get _buildBottomNavBarItems => [
-        const BottomNavigationBarItem(
-          icon: Icon(Icons.note),
-          label: 'Home',
+  List<BottomNavigationBarItem> _buildBottomNavBarItems(BuildContext context) =>
+      [
+        BottomNavigationBarItem(
+          icon: const Icon(Icons.home),
+          label: S.of(context).home,
         ),
-        const BottomNavigationBarItem(
-          icon: Icon(Icons.favorite),
-          label: '',
+        BottomNavigationBarItem(
+          icon: const Icon(Icons.favorite),
+          label: S.of(context).parties,
+        ),
+        BottomNavigationBarItem(
+          icon: const Icon(Icons.chat),
+          label: S.of(context).chats,
+        ),
+        BottomNavigationBarItem(
+          icon: const Icon(Icons.person),
+          label: S.of(context).me,
         ),
       ];
 }

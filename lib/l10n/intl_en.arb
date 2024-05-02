@@ -1,3 +1,7 @@
 {
-  "fontCheck": "Font check"
+  "fontCheck": "Font check",
+  "home": "Home",
+  "parties": "Parties",
+  "chats": "Chats",
+  "me": "Me"
 }

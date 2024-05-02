@@ -1,3 +1,7 @@
 {
-  "fontCheck": "Проверка шрифта"
+  "fontCheck": "Проверка шрифта",
+  "home": "Home",
+  "parties": "Parties",
+  "chats": "Chats",
+  "me": "Me"
 }

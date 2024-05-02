@@ -13,12 +13,16 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
+
+      // Навигация
       routerConfig: router,
+
       // Тема
       theme: lightTheme,
       darkTheme: darkTheme,
       themeAnimationDuration: Durations.long2,
       themeAnimationCurve: Curves.bounceIn,
+
       // Локализация
       localizationsDelegates: const [
         S.delegate,
@@ -26,8 +30,8 @@ class App extends StatelessWidget {
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      supportedLocales: S.delegate.supportedLocales,
       //locale: const Locale("ru"),
+      supportedLocales: S.delegate.supportedLocales,
     );
   }
 }
