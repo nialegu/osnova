@@ -23,6 +23,13 @@ class StateStringInputField extends State<StringInputField> {
   Widget build(BuildContext context) {
     return TextFormField(
       controller: widget.textController,
+      validator: (value) {
+        if (value == "") {
+          return "Fill this field";
+        } else {
+          return null;
+        }
+      },
       style: Theme.of(context).textTheme.displayMedium,
       obscureText: isObscure,
       decoration: InputDecoration(
