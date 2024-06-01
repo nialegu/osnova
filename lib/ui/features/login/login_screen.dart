@@ -22,8 +22,8 @@ class LoginScreen extends StatelessWidget {
       child: BlocBuilder<LoginBloc, LoginState>(
         builder: (context, state) {
           final loginBloc = BlocProvider.of<LoginBloc>(context);
-          _loginController.text = state.loginModel.login ?? "";
-          _passwordController.text = state.loginModel.password ?? "";
+          _loginController.text = loginBloc.loginModel.login;
+          _passwordController.text = loginBloc.loginModel.password;
 
           return Scaffold(
             appBar: AppBar(), //
@@ -52,6 +52,7 @@ class LoginScreen extends StatelessWidget {
                         : ElevatedButton(
                             onPressed: () async {
                               if (_formKey.currentState!.validate()) {
+                                FocusManager.instance.primaryFocus?.unfocus();
                                 await loginBloc
                                     .login(_loginController.text,
                                         _passwordController.text)
