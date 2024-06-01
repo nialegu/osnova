@@ -3,8 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 import 'bloc/login_bloc.dart';
+import 'widgets/animated_login_progress_icon.dart';
 import '../../core/widgets/platform_addicted/alert_dialog.dart';
-import '../../core/widgets/platform_addicted/progress_indicator.dart';
 import '../../core/widgets/string_input_field.dart';
 import '../../../generated/l10n.dart';
 
@@ -43,13 +43,8 @@ class LoginScreen extends StatelessWidget {
                       labelText: S.of(context).password,
                       textController: _passwordController,
                     ),
-                    state.isSuccess
-                        ? const Icon(
-                            Icons.done,
-                            color: Colors.green,
-                            size: 50,
-                          )
-                        : ElevatedButton(
+                    !state.isProcessing && !state.isSuccess
+                        ? ElevatedButton(
                             onPressed: () async {
                               if (_formKey.currentState!.validate()) {
                                 FocusManager.instance.primaryFocus?.unfocus();
@@ -75,10 +70,9 @@ class LoginScreen extends StatelessWidget {
                               }
                             },
                             style: Theme.of(context).elevatedButtonTheme.style,
-                            child: state.isProcessing
-                                ? progressIndicator
-                                : Text(S.of(context).login),
+                            child: Text(S.of(context).login),
                           )
+                        : const AnimatedLoginProgressIcon()
                   ]
                       .map((e) => Padding(
                             padding: const EdgeInsets.symmetric(
