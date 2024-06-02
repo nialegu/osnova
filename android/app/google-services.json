@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "769147409146",
+    "project_id": "osnova-e6aa6",
+    "storage_bucket": "osnova-e6aa6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:769147409146:android:5cf7145f1bfde650d46f43",
+        "android_client_info": {
+          "package_name": "com.example.osnova"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmAeDCKQIGgrbiTSlXw6BApRbGyyJ8kjI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
