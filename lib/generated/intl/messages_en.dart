@@ -27,8 +27,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterPassword": MessageLookupByLibrary.simpleMessage("Enter password"),
         "fontCheck": MessageLookupByLibrary.simpleMessage("Font check"),
         "home": MessageLookupByLibrary.simpleMessage("Home"),
+        "incorrectEmailOrPassword":
+            MessageLookupByLibrary.simpleMessage("Incorrect email or password"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "me": MessageLookupByLibrary.simpleMessage("Me"),
+        "ok": MessageLookupByLibrary.simpleMessage("Ok"),
         "parties": MessageLookupByLibrary.simpleMessage("Parties"),
         "password": MessageLookupByLibrary.simpleMessage("Password")
       };

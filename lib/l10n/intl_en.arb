@@ -7,5 +7,7 @@
   "enterLogin": "Enter login",
   "login": "Login",
   "enterPassword": "Enter password",
-  "password": "Password"
+  "password": "Password",
+  "incorrectEmailOrPassword": "Incorrect email or password",
+  "ok": "Ok"
 }
