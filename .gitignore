@@ -51,3 +51,6 @@ windows/flutter/generated_plugin_registrant.h
 windows/flutter/generated_plugin_registrant.cc
 windows/flutter/generated_plugins.cmake
 .vscode/launch.json
+.vs/VSWorkspaceState.json
+.vs/osnova/v17/.wsuo
+.vs/*
