@@ -1,6 +1,7 @@
 import 'package:get_it/get_it.dart';
-import 'package:osnova/data/database.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import 'data/database.dart';
 
 final sl = GetIt.instance;
 

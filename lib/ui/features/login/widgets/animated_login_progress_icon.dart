@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:osnova/ui/core/widgets/platform_addicted/progress_indicator.dart';
-import 'package:osnova/ui/features/login/bloc/login_bloc.dart';
+
+import '../../../core/widgets/platform_addicted/progress_indicator.dart';
+import '../bloc/login_bloc.dart';
 
 class AnimatedLoginProgressIcon extends StatefulWidget {
   const AnimatedLoginProgressIcon({super.key});

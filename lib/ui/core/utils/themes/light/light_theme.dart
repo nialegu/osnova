@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:osnova/ui/core/utils/app_colors.dart';
+import '../../app_colors.dart';
 
 part 'styles/text_theme.dart';
 part 'styles/text_styles.dart';

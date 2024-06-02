@@ -2,7 +2,8 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:osnova/generated/l10n.dart';
+
+import '../../../../generated/l10n.dart';
 
 Widget alert(String title, String text) {
   return Platform.isAndroid
