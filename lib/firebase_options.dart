@@ -3,6 +3,7 @@
 import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 import 'package:flutter/foundation.dart'
     show defaultTargetPlatform, kIsWeb, TargetPlatform;
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 /// Default [FirebaseOptions] for use with your Firebase apps.
 ///
@@ -40,49 +41,49 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyDWnRn7hnlYxxQ_rHCk6h0uZbWB4A21N4Q',
-    appId: '1:769147409146:web:0e80dcc092f1fcded46f43',
-    messagingSenderId: '769147409146',
-    projectId: 'osnova-e6aa6',
-    authDomain: 'osnova-e6aa6.firebaseapp.com',
-    storageBucket: 'osnova-e6aa6.appspot.com',
-    measurementId: 'G-0GHT5M8WNP',
+  static FirebaseOptions web = FirebaseOptions(
+    apiKey: dotenv.env['webApiKey']!,
+    appId: dotenv.env['appId']!,
+    messagingSenderId: dotenv.env['messagingSenderId']!,
+    projectId: dotenv.env['projectId']!,
+    authDomain: dotenv.env['webAuthDomain']!,
+    storageBucket: dotenv.env['storageBucket']!,
+    measurementId: dotenv.env['webMeasurementId']!,
   );
 
-  static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBmAeDCKQIGgrbiTSlXw6BApRbGyyJ8kjI',
-    appId: '1:769147409146:android:5cf7145f1bfde650d46f43',
-    messagingSenderId: '769147409146',
-    projectId: 'osnova-e6aa6',
-    storageBucket: 'osnova-e6aa6.appspot.com',
+  static FirebaseOptions android = FirebaseOptions(
+    apiKey: dotenv.env['androidApiKey']!,
+    appId: dotenv.env['appId']!,
+    messagingSenderId: dotenv.env['messagingSenderId']!,
+    projectId: dotenv.env['projectId']!,
+    storageBucket: dotenv.env['storageBucket']!,
   );
 
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyACCHVV1LgkxJ-DrZnynWkxQrS619G6ewA',
-    appId: '1:769147409146:ios:a0aa517bf46e50a2d46f43',
-    messagingSenderId: '769147409146',
-    projectId: 'osnova-e6aa6',
-    storageBucket: 'osnova-e6aa6.appspot.com',
-    iosBundleId: 'com.example.osnova',
+  static FirebaseOptions ios = FirebaseOptions(
+    apiKey: dotenv.env['iosApiKey']!,
+    appId: dotenv.env['appId']!,
+    messagingSenderId: dotenv.env['messagingSenderId']!,
+    projectId: dotenv.env['projectId']!,
+    storageBucket: dotenv.env['storageBucket']!,
+    iosBundleId: dotenv.env['iosBundleId']!,
   );
 
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyACCHVV1LgkxJ-DrZnynWkxQrS619G6ewA',
-    appId: '1:769147409146:ios:a0aa517bf46e50a2d46f43',
-    messagingSenderId: '769147409146',
-    projectId: 'osnova-e6aa6',
-    storageBucket: 'osnova-e6aa6.appspot.com',
-    iosBundleId: 'com.example.osnova',
+  static FirebaseOptions macos = FirebaseOptions(
+    apiKey: dotenv.env['iosApiKey']!,
+    appId: dotenv.env['appId']!,
+    messagingSenderId: dotenv.env['messagingSenderId']!,
+    projectId: dotenv.env['projectId']!,
+    storageBucket: dotenv.env['storageBucket']!,
+    iosBundleId: dotenv.env['iosBundleId']!,
   );
 
-  static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyDWnRn7hnlYxxQ_rHCk6h0uZbWB4A21N4Q',
-    appId: '1:769147409146:web:de02475cc73f826fd46f43',
-    messagingSenderId: '769147409146',
-    projectId: 'osnova-e6aa6',
-    authDomain: 'osnova-e6aa6.firebaseapp.com',
-    storageBucket: 'osnova-e6aa6.appspot.com',
-    measurementId: 'G-FFTCG40X60',
+  static FirebaseOptions windows = FirebaseOptions(
+    apiKey: dotenv.env['windowsApiKey']!,
+    appId: dotenv.env['appId']!,
+    messagingSenderId: dotenv.env['messagingSenderId']!,
+    projectId: dotenv.env['projectId']!,
+    authDomain: dotenv.env['windowsAuthDomain']!,
+    storageBucket: dotenv.env['storageBucket']!,
+    measurementId: dotenv.env['windowsMeasurementId']!,
   );
 }
