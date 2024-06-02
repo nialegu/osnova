@@ -11,9 +11,9 @@ final lightTheme = ThemeData(
   textTheme: createLightTextTheme,
   elevatedButtonTheme: const ElevatedButtonThemeData(
     style: ButtonStyle(
-      textStyle: MaterialStatePropertyAll(buttonTextStyle),
-      backgroundColor: MaterialStatePropertyAll(AppColors.deepPurple),
-      foregroundColor: MaterialStatePropertyAll(AppColors.white),
+      textStyle: WidgetStatePropertyAll(buttonTextStyle),
+      backgroundColor: WidgetStatePropertyAll(AppColors.deepPurple),
+      foregroundColor: WidgetStatePropertyAll(AppColors.white),
       enableFeedback: true,
       animationDuration: Duration(milliseconds: 500),
     ),
