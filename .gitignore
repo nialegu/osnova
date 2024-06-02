@@ -54,3 +54,4 @@ windows/flutter/generated_plugins.cmake
 .vs/VSWorkspaceState.json
 .vs/osnova/v17/.wsuo
 .vs/*
+*.env
