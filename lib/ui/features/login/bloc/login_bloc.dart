@@ -8,7 +8,7 @@ part 'login_event.dart';
 part 'login_state.dart';
 
 class LoginBloc extends Bloc<LoginEvent, LoginState> {
-  LoginModel loginModel = const LoginModel("", "");
+  LoginModel loginModel = const LoginModel();
 
   LoginBloc() : super(const LoginInitial()) {
     on<LoginEvent>(_onInitial);
@@ -19,18 +19,21 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
   _onInitial(LoginEvent event, Emitter<LoginState> emit) {
     emit(const LoginInitial());
   }
+
   _onLoading(LoginLoadingEvent event, Emitter<LoginState> emit) async {
     emit(LoginLoadingState(loginModel));
   }
+
   _onSuccess(LoginSuccessEvent event, Emitter<LoginState> emit) {
     emit(LoginSuccessState(loginModel));
   }
+
   _onFailed(LoginFailedEvent event, Emitter<LoginState> emit) {
     emit(LoginFailedState(loginModel));
   }
 
   Future<bool> login(String login, String password) {
-    loginModel = LoginModel(login, password);
+    loginModel = LoginModel(login: login, password: password);
     add(LoginLoadingEvent());
 
     // имитация логина

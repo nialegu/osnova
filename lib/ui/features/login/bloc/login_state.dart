@@ -16,7 +16,7 @@ sealed class LoginState {
 final class LoginInitial extends LoginState {
   const LoginInitial()
       : super(
-            loginModel: const LoginModel("", ""),
+            loginModel: const LoginModel(),
             isSuccess: false,
             isProcessing: false);
 }

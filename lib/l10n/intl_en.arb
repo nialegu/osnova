@@ -9,5 +9,13 @@
   "enterPassword": "Enter password",
   "password": "Password",
   "incorrectEmailOrPassword": "Incorrect email or password",
-  "ok": "Ok"
+  "ok": "Ok",
+  "signUp": "Sign up",
+  "confirmPassword": "Confirm Password",
+  "enterFirstName": "Enter first name",
+  "firstName": "First Name",
+  "enterSecondName": "Enter second name",
+  "secondName": "Second name",
+  "enterPhoneNumber": "Enter phone number",
+  "phoneNumber": "Phone number"
 }

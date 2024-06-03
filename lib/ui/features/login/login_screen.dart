@@ -22,8 +22,8 @@ class LoginScreen extends StatelessWidget {
       child: BlocBuilder<LoginBloc, LoginState>(
         builder: (context, state) {
           final loginBloc = BlocProvider.of<LoginBloc>(context);
-          _loginController.text = loginBloc.loginModel.login;
-          _passwordController.text = loginBloc.loginModel.password;
+          _loginController.text = state.loginModel.login;
+          _passwordController.text = state.loginModel.password;
 
           return Scaffold(
             appBar: AppBar(), //
@@ -72,7 +72,11 @@ class LoginScreen extends StatelessWidget {
                             style: Theme.of(context).elevatedButtonTheme.style,
                             child: Text(S.of(context).login),
                           )
-                        : const AnimatedLoginProgressIcon()
+                        : const AnimatedLoginProgressIcon(),
+                    InkWell(
+                      child: Text(S.of(context).signUp),
+                      onTap: () => context.go("/signup"),
+                    )
                   ]
                       .map((e) => Padding(
                             padding: const EdgeInsets.symmetric(
